@@ -1,0 +1,16 @@
+workflows:
+  android-workflow:
+    name: Android Workflow
+    max_build_duration: 120
+    environment:
+      flutter: stable  # Ensures Flutter 3.29.0+
+      vars:
+        PACKAGE_NAME: "com.example.munafakhor"
+        JAVA_TOOL_OPTIONS: "-Xmx5g"
+    scripts:
+      - name: Get Flutter packages
+        script: flutter pub get
+      - name: Build AAB with Flutter
+        script: flutter build appbundle --release --verbose
+    artifacts:
+      - build/**/outputs/**/*.aab
