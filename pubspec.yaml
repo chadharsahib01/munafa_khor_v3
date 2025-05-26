@@ -3,17 +3,17 @@ description: A Flutter project for Munafa Khor
 publish_to: 'none'
 
 environment:
-  sdk: ">=2.18.0 <3.0.0"
+  sdk: '>=3.0.0 <4.0.0'  # Updated to support Flutter 3.29.0+
 
 dependencies:
   flutter:
     sdk: flutter
-
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.8  # Updated to latest version
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^4.0.0  # Added for better code quality
 
 flutter:
   uses-material-design: true
